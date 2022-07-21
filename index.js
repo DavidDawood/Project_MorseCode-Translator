@@ -11,7 +11,7 @@
 
 // Add unit testins for each of the pure function that your translator uses (each function should have at least 4 tests, think of edge case, wrong inputs, etc ...)
 
-import { morseKeys, TranslateMorse, SwitchMorse } from "./morse.js";
+import { TranslateMorse, SwitchMorse } from "./morse.js";
 
 let isEnglish = true;
 const text1 = document.getElementById("textareaOne");
