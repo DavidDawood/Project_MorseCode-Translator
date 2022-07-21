@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Morse Code Translator</title>
+        <script
+            src="https://kit.fontawesome.com/5ceb9f4a89.js"
+            crossorigin="anonymous"
+        ></script>
+        <script type="module" src="./index.js" defer></script>
+        <script type="module" src="./morse.js" defer></script>
+        <link rel="stylesheet" href="./index.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="head">
+                <h1>Morse Code Translator</h1>
+                <p>
+                    Instruction: For morse code, use a space per character, and
+                    use two spaces per word
+                </p>
+                <h3 id="error"></h3>
+                <div class="container__horizontal">
+                    <div class="container__box">
+                        <h2 id="leftBox">English</h2>
+                        <textarea
+                            name=""
+                            id="textareaOne"
+                            cols="50"
+                            rows="15"
+                        ></textarea>
+                    </div>
+                    <div class="container__mid">
+                        <button id="reverseBtn">
+                            <i class="fa-solid fa-repeat"></i>
+                        </button>
+                    </div>
+                    <div class="container__box">
+                        <h2 id="rightBox">Morse Code</h2>
+                        <textarea
+                            name=""
+                            id="textareaTwo"
+                            cols="50"
+                            rows="15"
+                            disabled
+                        ></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+.container, .container__horizontal, .head > *, h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: rgb(80, 80, 80);
+}
+
+.container {
+  margin: auto;
+  margin-top: 120px;
+  width: 1200px;
+  height: 700px;
+  border: solid black 5px;
+  background-color: rgb(119, 119, 119);
+  box-shadow: 0px 0px 30px 10px black;
+  border-radius: 100px;
+}
+.container__box {
+  flex-direction: column;
+  margin: 30px;
+  border: dashed black 2px;
+  background-color: rgb(80, 80, 80);
+}
+
+#reverseBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+}
+#reverseBtn:hover {
+  box-shadow: 0px 0px 5px 1px;
+}
+#reverseBtn:active {
+  filter: invert(90%);
+}
+
+.head {
+  flex-direction: column;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.head > * {
+  color: white;
+}
+.head > p {
+  text-decoration: underline;
+}
+.head > h1 {
+  text-decoration: overline;
+}
+.head > h3 {
+  color: rgb(189, 0, 0);
+  font-weight: bold;
+  font-size: 30px;
+  height: 30px;
+}
+
+h2 {
+  color: white;
+}
+
+p {
+  color: white;
+  font-size: 30px;
+}
+
+textarea {
+  padding: 0px;
+  resize: none;
+  margin: 0px 5px;
+}
