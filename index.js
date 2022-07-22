@@ -11,7 +11,7 @@
 
 // Add unit testins for each of the pure function that your translator uses (each function should have at least 4 tests, think of edge case, wrong inputs, etc ...)
 
-import { TranslateMorse, SwitchMorse } from "./morse.js";
+import { morseKeys, TranslateMorse, SwitchMorse } from "./morse.js";
 
 let isEnglish = true;
 const text1 = document.getElementById("textareaOne");
@@ -26,7 +26,7 @@ text1.addEventListener("input", UpdateTranslation);
 
 function UpdateTranslation() {
     try {
-        let translation = TranslateMorse(text1.value, isEnglish);
+        let translation = TranslateMorse(morseKeys, text1.value, isEnglish);
         text2.value = translation;
         errorText.innerHTML = "";
     } catch (e) {
@@ -45,5 +45,5 @@ function ReverseAndUpdate() {
     leftHeader.innerHTML = rightHeader.innerHTML;
     rightHeader.innerHTML = temporaryHead;
 
-    SwitchMorse();
+    SwitchMorse(morseKeys);
 }
