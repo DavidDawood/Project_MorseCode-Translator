@@ -28,11 +28,14 @@ export let morseKeys = {
     " ": "",
 };
 
-export const SwitchMorse = () => {
-    morseKeys = Object.entries(morseKeys).reduce((acc, [key, value]) => {
-        acc[value] = key;
-        return acc;
-    }, {});
+export const SwitchMorse = (morseKeyList) => {
+    return (morseKeyList = Object.entries(morseKeyList).reduce(
+        (acc, [key, value]) => {
+            acc[value] = key;
+            return acc;
+        },
+        {},
+    ));
 };
 
 export const TranslateMorse = (morseKeys, stringText, isEnglish) => {
