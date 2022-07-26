@@ -28,21 +28,14 @@ export let morseKeys = {
     " ": "",
 };
 
-export const SwitchMorse = (morseKeys) => {
-    return (morseKeys = Object.entries(morseKeys).reduce(
-        (acc, [key, value]) => {
-            acc[value] = key;
-            return acc;
-        },
-        {},
-    ));
+export const SwitchMorse = () => {
+    morseKeys = Object.entries(morseKeys).reduce((acc, [key, value]) => {
+        acc[value] = key;
+        return acc;
+    }, {});
 };
 
-export const TranslateMorse = (
-    morseKeys,
-    stringText = "",
-    isEnglish = true,
-) => {
+export const TranslateMorse = (morseKeys, stringText, isEnglish) => {
     // split each character, fit it into an array, search for its value, and then translate it, place it back into a
 
     // different methods of splitting is needed as for letters, its every letter but with morse code its with every space
