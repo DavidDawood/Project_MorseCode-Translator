@@ -29,13 +29,15 @@ export let morseKeys = {
 };
 
 export const SwitchMorse = (morseKeyList) => {
-    return (morseKeyList = Object.entries(morseKeyList).reduce(
+    const returnValue = Object.entries(morseKeyList).reduce(
         (acc, [key, value]) => {
             acc[value] = key;
             return acc;
         },
         {},
-    ));
+    );
+    morseKeys = returnValue;
+    return returnValue;
 };
 
 export const TranslateMorse = (morseKeys, stringText, isEnglish) => {
